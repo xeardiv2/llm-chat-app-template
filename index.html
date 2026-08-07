@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>LLM Chat — Estadísticas y Fútbol</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="brand">Promedios Chat</h1>
+      <nav>
+        <a href="#" class="btn-outline">Acerca</a>
+        <a href="#" class="btn">Empezar</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="hero">
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <h2>Consultá horarios de eventos y charlá sobre fútbol</h2>
+        <p>Modelo especializado en estadísticas: usa datos de promedios.com.ar cuando corresponde. Preguntá "¿A qué hora es el próximo partido?" o "¿Cuál es el promedio de visitantes?"</p>
+        <div class="cta-row">
+          <a id="openChatBtn" class="cta">Abrir chat</a>
+          <a href="#" class="ctasmall">Ver estadísticas</a>
+        </div>
+      </div>
+
+      <div class="hero-cards">
+        <div class="card">
+          <h3>Horarios</h3>
+          <p>Consulta a qué hora empieza un evento.</p>
+        </div>
+        <div class="card">
+          <h3>Promedios</h3>
+          <p>Extrae y resume estadísticas desde promedios.com.ar.</p>
+        </div>
+        <div class="card">
+          <h3>Fútbol</h3>
+          <p>Conversaciones y análisis de partidos, jugadores y promedios.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© <span id="year"></span> Promedios Chat</div>
+  </footer>
+
+  <!-- Chat widget -->
+  <div id="chatWidget" class="chat-widget collapsed" aria-hidden="true">
+    <div class="chat-header">
+      <div>
+        <strong>PromediosBot</strong>
+        <div class="sub">Especialista en horarios y fútbol</div>
+      </div>
+      <button id="closeChat" class="close">×</button>
+    </div>
+    <div id="chatMessages" class="chat-messages"></div>
+    <form id="chatForm" class="chat-form">
+      <input id="chatInput" autocomplete="off" placeholder="Escribí tu pregunta (p. ej. ¿A qué hora es el partido?)" />
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+
+  <button id="chatFab" class="chat-fab" aria-label="Abrir chat">💬</button>
+
+  <script src="chat-frontend.js"></script>
+</body>
+</html>
